@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blackout</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="map.css">
+<link rel="stylesheet" href="observer.css">
+<script src="js/i18n.js" defer></script>
+<script src="js/cues.js" defer></script>
+<script src="js/speech.js" defer></script>
+<script src="js/map.js" defer></script>
+<script src="js/result.js" defer></script>
+<script src="js/example.js" defer></script>
+</head>
+<body>
+<div class="example-banner">
+<span data-i18n="exampleBanner">这是一场虚构谈话的真实回放，不需要 key。</span>
+<span id="exampleNoAudio" class="example-no-audio" data-i18n="exampleNoAudio">回放不播放声音。</span>
+<span class="example-banner-actions">
+<a href="https://github.com/huangfe9/blackout-think#run-it" target="_blank" rel="noopener noreferrer" data-i18n="runYourself">自己运行</a>
+<button id="exampleLangToggle" type="button" class="lang-toggle example-lang-toggle">English</button>
+</span>
+</div>
+<main id="exampleStage" class="stage example-stage">
+<svg id="exampleMap" class="map map-night" role="img" aria-label="星图" preserveAspectRatio="xMidYMid meet"></svg>
+<header class="corner corner-left" data-i18n="observerBrand">Blackout · 星图</header>
+<div id="exampleMic" class="corner corner-right" data-i18n="micListening">在听</div>
+<aside id="exampleParkingPanel" class="parking">
+<p class="parking-label" data-i18n="parkingLot">停车场</p>
+<ul id="exampleParking" class="parking-list"></ul>
+</aside>
+<footer id="exampleSubtitles" class="subtitles">
+<p id="exampleCaption" class="caption"></p>
+<p id="exampleReply" class="ai-line example-reply"></p>
+<p id="exampleDecision" class="decision-line"></p>
+</footer>
+<p id="exampleCounters" class="counters"></p>
+<button id="exampleSkipBtn" type="button" class="example-skip" data-i18n="exampleSkip">跳到结果</button>
+<p id="exampleError" class="example-error" hidden><span data-i18n="exampleNeedServer">这个例子需要通过网页服务打开。</span> <a href="https://github.com/huangfe9/blackout-think#run-it" target="_blank" rel="noopener noreferrer" data-i18n="runYourself">自己运行</a></p>
+</main>
+<div id="page-start" hidden></div>
+<div id="page-black" hidden></div>
+<main id="page-result" class="page result-page" hidden>
+<h1 id="resultTitle">成果</h1>
+<p id="resultGoal" class="result-goal" hidden></p>
+<p id="degradedNotice" class="warning" hidden data-i18n="degraded">AI 整理没有完成，下面是对话中记录的原始内容。</p>
+<div class="summary-block">
+<p id="resultSummary" class="summary-text" hidden></p>
+<button id="stopReadingBtn" type="button" class="quiet-btn" hidden data-i18n="stopReading">停止朗读</button>
+</div>
+<div class="result-top-actions">
+<button id="copyBtn" type="button" data-i18n="copyMarkdown">复制为 Markdown</button>
+<span id="posterActions" class="poster-top-actions"></span>
+<label id="sketchLabel" for="sketchInput" data-i18n="addSketch">加入纸上草稿</label>
+<input id="sketchInput" type="file" accept="image/*" hidden>
+<button id="restartBtn" type="button" data-i18n="startAgain">再来一次</button>
+</div>
+<figure id="posterFigure" class="poster-figure" hidden></figure>
+<div id="result"></div>
+<p id="resultErr" class="error" role="alert"></p>
+</main>
+</body>
+</html>

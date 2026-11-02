@@ -1,0 +1,419 @@
+{
+  "date": "2026-11-02",
+  "complete": true,
+  "budget_exhausted": false,
+  "talks": [
+    {
+      "id": "en-product-launch",
+      "language": "en",
+      "goal": "Decide how to run a small product launch this week",
+      "lines": 17,
+      "ai_spoke": 4,
+      "pull_backs": {
+        "expected": 1,
+        "hit": 1
+      },
+      "conflicts": {
+        "expected": 1,
+        "asked": 1
+      },
+      "tasks": {
+        "expected": 1,
+        "started": 1
+      },
+      "false_interruptions": 0,
+      "decisions": {
+        "found": 2,
+        "expected": 2
+      },
+      "todos": {
+        "found": 1,
+        "expected": 1
+      },
+      "open_questions": {
+        "found": 1,
+        "expected": 1
+      },
+      "parking_lot": {
+        "found": 1,
+        "expected": 1
+      },
+      "draft": {
+        "expected": true,
+        "finished": true,
+        "has_placeholder": true
+      },
+      "median_turn_seconds": 4.294,
+      "slowest_turn_seconds": 7.895,
+      "budget_exhausted": false,
+      "degraded": false,
+      "cost_usd": 0.101144
+    },
+    {
+      "id": "en-job-offer",
+      "language": "en",
+      "goal": "Decide whether to accept a new job offer or stay in the current role",
+      "lines": 16,
+      "ai_spoke": 4,
+      "pull_backs": {
+        "expected": 1,
+        "hit": 1
+      },
+      "conflicts": {
+        "expected": 1,
+        "asked": 1
+      },
+      "tasks": {
+        "expected": 1,
+        "started": 1
+      },
+      "false_interruptions": 0,
+      "decisions": {
+        "found": 0,
+        "expected": 1
+      },
+      "todos": {
+        "found": 1,
+        "expected": 1
+      },
+      "open_questions": {
+        "found": 1,
+        "expected": 1
+      },
+      "parking_lot": {
+        "found": 1,
+        "expected": 1
+      },
+      "draft": {
+        "expected": false,
+        "finished": true,
+        "has_placeholder": true
+      },
+      "median_turn_seconds": 4.192,
+      "slowest_turn_seconds": 7.688,
+      "budget_exhausted": false,
+      "degraded": false,
+      "cost_usd": 0.119577
+    },
+    {
+      "id": "en-team-offsite",
+      "language": "en",
+      "goal": "Plan a one-day team offsite next month",
+      "lines": 15,
+      "ai_spoke": 4,
+      "pull_backs": {
+        "expected": 1,
+        "hit": 1
+      },
+      "conflicts": {
+        "expected": 1,
+        "asked": 1
+      },
+      "tasks": {
+        "expected": 1,
+        "started": 1
+      },
+      "false_interruptions": 0,
+      "decisions": {
+        "found": 1,
+        "expected": 1
+      },
+      "todos": {
+        "found": 1,
+        "expected": 1
+      },
+      "open_questions": {
+        "found": 1,
+        "expected": 1
+      },
+      "parking_lot": {
+        "found": 1,
+        "expected": 1
+      },
+      "draft": {
+        "expected": false,
+        "finished": true,
+        "has_placeholder": true
+      },
+      "median_turn_seconds": 5.069,
+      "slowest_turn_seconds": 9.336,
+      "budget_exhausted": false,
+      "degraded": false,
+      "cost_usd": 0.150447
+    },
+    {
+      "id": "en-move-apartment",
+      "language": "en",
+      "goal": "Decide whether to move to a smaller apartment closer to work",
+      "lines": 15,
+      "ai_spoke": 4,
+      "pull_backs": {
+        "expected": 1,
+        "hit": 1
+      },
+      "conflicts": {
+        "expected": 1,
+        "asked": 1
+      },
+      "tasks": {
+        "expected": 1,
+        "started": 1
+      },
+      "false_interruptions": 0,
+      "decisions": {
+        "found": 1,
+        "expected": 1
+      },
+      "todos": {
+        "found": 1,
+        "expected": 1
+      },
+      "open_questions": {
+        "found": 1,
+        "expected": 1
+      },
+      "parking_lot": {
+        "found": 1,
+        "expected": 1
+      },
+      "draft": {
+        "expected": false,
+        "finished": true,
+        "has_placeholder": true
+      },
+      "median_turn_seconds": 4.462,
+      "slowest_turn_seconds": 6.599,
+      "budget_exhausted": false,
+      "degraded": false,
+      "cost_usd": 0.103292
+    },
+    {
+      "id": "zh-side-project",
+      "language": "zh",
+      "goal": "决定要不要接一个业余时间的副业项目",
+      "lines": 16,
+      "ai_spoke": 4,
+      "pull_backs": {
+        "expected": 1,
+        "hit": 1
+      },
+      "conflicts": {
+        "expected": 1,
+        "asked": 1
+      },
+      "tasks": {
+        "expected": 1,
+        "started": 1
+      },
+      "false_interruptions": 0,
+      "decisions": {
+        "found": 1,
+        "expected": 2
+      },
+      "todos": {
+        "found": 1,
+        "expected": 1
+      },
+      "open_questions": {
+        "found": 1,
+        "expected": 1
+      },
+      "parking_lot": {
+        "found": 1,
+        "expected": 1
+      },
+      "draft": {
+        "expected": true,
+        "finished": true,
+        "has_placeholder": true
+      },
+      "median_turn_seconds": 4.426,
+      "slowest_turn_seconds": 7.878,
+      "budget_exhausted": false,
+      "degraded": false,
+      "cost_usd": 0.114198
+    },
+    {
+      "id": "zh-family-trip",
+      "language": "zh",
+      "goal": "安排一次全家人的短途旅行",
+      "lines": 15,
+      "ai_spoke": 3,
+      "pull_backs": {
+        "expected": 1,
+        "hit": 1
+      },
+      "conflicts": {
+        "expected": 1,
+        "asked": 0
+      },
+      "tasks": {
+        "expected": 1,
+        "started": 1
+      },
+      "false_interruptions": 0,
+      "decisions": {
+        "found": 1,
+        "expected": 1
+      },
+      "todos": {
+        "found": 1,
+        "expected": 1
+      },
+      "open_questions": {
+        "found": 1,
+        "expected": 1
+      },
+      "parking_lot": {
+        "found": 1,
+        "expected": 1
+      },
+      "draft": {
+        "expected": false,
+        "finished": false,
+        "has_placeholder": false
+      },
+      "median_turn_seconds": 3.797,
+      "slowest_turn_seconds": 10.026,
+      "budget_exhausted": false,
+      "degraded": false,
+      "cost_usd": 0.108487
+    },
+    {
+      "id": "zh-small-shop-launch",
+      "language": "zh",
+      "goal": "筹备一个小店的开业活动",
+      "lines": 15,
+      "ai_spoke": 4,
+      "pull_backs": {
+        "expected": 1,
+        "hit": 1
+      },
+      "conflicts": {
+        "expected": 1,
+        "asked": 1
+      },
+      "tasks": {
+        "expected": 1,
+        "started": 1
+      },
+      "false_interruptions": 0,
+      "decisions": {
+        "found": 1,
+        "expected": 1
+      },
+      "todos": {
+        "found": 1,
+        "expected": 1
+      },
+      "open_questions": {
+        "found": 0,
+        "expected": 1
+      },
+      "parking_lot": {
+        "found": 1,
+        "expected": 1
+      },
+      "draft": {
+        "expected": false,
+        "finished": false,
+        "has_placeholder": false
+      },
+      "median_turn_seconds": 3.397,
+      "slowest_turn_seconds": 6.994,
+      "budget_exhausted": false,
+      "degraded": false,
+      "cost_usd": 0.114587
+    },
+    {
+      "id": "zh-course-presentation",
+      "language": "zh",
+      "goal": "准备一次小组课程展示的分工和内容",
+      "lines": 15,
+      "ai_spoke": 4,
+      "pull_backs": {
+        "expected": 1,
+        "hit": 1
+      },
+      "conflicts": {
+        "expected": 1,
+        "asked": 1
+      },
+      "tasks": {
+        "expected": 1,
+        "started": 1
+      },
+      "false_interruptions": 0,
+      "decisions": {
+        "found": 1,
+        "expected": 1
+      },
+      "todos": {
+        "found": 1,
+        "expected": 1
+      },
+      "open_questions": {
+        "found": 0,
+        "expected": 1
+      },
+      "parking_lot": {
+        "found": 1,
+        "expected": 1
+      },
+      "draft": {
+        "expected": false,
+        "finished": true,
+        "has_placeholder": true
+      },
+      "median_turn_seconds": 4.036,
+      "slowest_turn_seconds": 6.329,
+      "budget_exhausted": false,
+      "degraded": false,
+      "cost_usd": 0.112384
+    }
+  ],
+  "totals": {
+    "talks": 8,
+    "lines": 124,
+    "ai_spoke": 31,
+    "pull_backs": {
+      "expected": 8,
+      "hit": 8,
+      "percent": 100.0
+    },
+    "conflicts": {
+      "expected": 8,
+      "hit": 7,
+      "percent": 87.5
+    },
+    "tasks": {
+      "expected": 8,
+      "hit": 8,
+      "percent": 100.0
+    },
+    "false_interruptions": 0,
+    "decisions": {
+      "expected": 10,
+      "found": 8,
+      "percent": 80.0
+    },
+    "todos": {
+      "expected": 8,
+      "found": 8,
+      "percent": 100.0
+    },
+    "open_questions": {
+      "expected": 8,
+      "found": 6,
+      "percent": 75.0
+    },
+    "parking_lot": {
+      "expected": 8,
+      "found": 8,
+      "percent": 100.0
+    },
+    "drafts_expected": 2,
+    "drafts_finished": 6,
+    "cost_usd": 0.924116
+  }
+}

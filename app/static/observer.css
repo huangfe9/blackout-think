@@ -1,0 +1,258 @@
+:root {
+  --night: #000000;
+  --dusk: #0b0b0c;
+  --star: #f4efe6;
+  --star-dim: #8a8478;
+  --line: #3a3833;
+  --amber: #e8b44c;
+  --signal: #e5604d;
+  --parked: #7d93b2;
+  --paper: #f6f1e7;
+  --ink: #1c1a17;
+  --ink-dim: #6b655a;
+  --rule: #d9d1c1;
+}
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--night);
+  color: var(--star);
+  height: 100vh;
+  overflow: hidden;
+  font-family: "PingFang SC", "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans CJK SC", "Segoe UI", system-ui, sans-serif;
+}
+.stage {
+  position: fixed;
+  inset: 0;
+  background: var(--night);
+  overflow: hidden;
+}
+#obsMap,
+.stage svg.map,
+.stage svg.map-night {
+  position: absolute;
+  top: 44px;
+  bottom: 90px;
+  right: 220px;
+  left: 0;
+  width: calc(100% - 220px);
+  height: calc(100% - 134px);
+  display: block;
+  transition: opacity 1.2s ease;
+}
+#obsMap.no-parking,
+.stage svg.map.no-parking {
+  right: 0;
+  width: 100%;
+}
+#obsMap.map-faded {
+  opacity: 0;
+}
+.corner {
+  position: absolute;
+  top: 18px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: var(--star-dim);
+  z-index: 3;
+}
+.corner-left {
+  left: 22px;
+}
+.corner-right {
+  right: 22px;
+  letter-spacing: 1px;
+}
+.corner-right.mic-ai {
+  color: var(--amber);
+}
+.quiet-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--star-dim);
+  font-size: 22px;
+  font-weight: 300;
+  padding: 24px;
+  margin: 0;
+  z-index: 2;
+}
+.finished-line {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  right: 220px;
+  text-align: center;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--star);
+  animation: fadeIn 1.2s ease forwards;
+  z-index: 3;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.parking {
+  position: absolute;
+  right: 22px;
+  top: 52px;
+  width: 200px;
+  z-index: 3;
+}
+.parking.no-parking {
+  display: none;
+}
+.parking-label {
+  color: var(--parked);
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin: 0 0 12px;
+}
+.parking-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.parking-list li {
+  color: var(--parked);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 10px;
+  overflow-wrap: anywhere;
+}
+.parking-list li.new {
+  color: var(--amber);
+  animation: parkedIn 2.5s ease forwards;
+}
+@keyframes parkedIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-46vw);
+    color: var(--amber);
+  }
+  35% {
+    opacity: 1;
+    transform: translateX(0);
+    color: var(--amber);
+  }
+  80% {
+    color: var(--amber);
+  }
+  100% {
+    color: var(--parked);
+  }
+}
+.subtitles {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 14px;
+  max-height: 76px;
+  overflow: hidden;
+  text-align: center;
+  z-index: 3;
+  transition: opacity 1s ease;
+}
+.subtitles.faded {
+  opacity: 0;
+}
+.caption {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: var(--star);
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.ai-line {
+  margin: 6px 0 0;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: var(--amber);
+  overflow-wrap: anywhere;
+}
+.decision-line {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: var(--star-dim);
+}
+.counters {
+  position: absolute;
+  left: 22px;
+  bottom: 18px;
+  margin: 0;
+  font-size: 13px;
+  color: var(--star-dim);
+  z-index: 3;
+}
+.poster-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--night);
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  padding: 20px;
+}
+.poster-wrap.visible {
+  opacity: 1;
+}
+.poster-title {
+  margin: 0 0 16px;
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--star);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.poster-image {
+  display: block;
+  max-width: calc(100vw - 40px);
+  max-height: calc(100vh - 110px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+@media (prefers-reduced-motion: reduce) {
+  .parking-list li.new {
+    animation: none;
+    color: var(--parked);
+  }
+  .finished-line {
+    animation: none;
+  }
+  .subtitles {
+    transition: none;
+  }
+  #obsMap,
+  .poster-wrap {
+    transition: none;
+  }
+}

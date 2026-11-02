@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blackout</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/static/app.css">
+<script src="/static/js/i18n.js" defer></script>
+<script src="/static/js/setup.js" defer></script>
+</head>
+<body>
+<main class="page setup-page">
+<div class="top-actions"><button id="setupLangToggle" type="button" class="lang-toggle">English</button></div>
+<p class="brand">Blackout</p>
+<h1 class="setup-heading" data-i18n="setupHeading">先填你自己的 Meta key</h1>
+<p class="start-subline" data-i18n="setupLine">Blackout 在你自己的电脑上运行，用你的 key 调用 Meta 的模型。</p>
+<section id="setupInputView" hidden>
+<div class="goal-line setup-line-input">
+<input id="keyInput" type="password" data-i18n-placeholder="keyPlaceholder" placeholder="粘贴 key" autocomplete="new-password" autocapitalize="off" autocorrect="off" spellcheck="false" data-1p-ignore data-lpignore="true" data-form-type="other">
+</div>
+<button id="saveKeyBtn" type="button" class="primary lights-off" data-i18n="saveKey">保存并检查</button>
+<p><a class="setup-link" href="https://dev.meta.ai/api-keys/" target="_blank" rel="noopener noreferrer" data-i18n="getKey">去 Meta 申请 key</a></p>
+<p><a class="setup-link" href="/static/example.html" data-i18n="noKeyExample">还没有 key？先看一个真实例子</a></p>
+</section>
+<section id="setupSavedView" hidden>
+<p class="setup-status" data-i18n="savedKey">这台电脑上已经保存了一个 key。</p>
+<div class="setup-actions">
+<button id="replaceKeyBtn" type="button" class="quiet-btn" data-i18n="replaceKey">换一个</button>
+<button id="deleteKeyBtn" type="button" class="quiet-btn" data-i18n="deleteKey">删除</button>
+<button id="savedBackBtn" type="button" class="quiet-btn" data-i18n="back">返回</button>
+</div>
+</section>
+<section id="setupEnvView" hidden>
+<p class="setup-status" data-i18n="envKey">正在使用 .env 或环境变量里的 key，要改请直接改那里。</p>
+<div class="setup-actions">
+<button id="envBackBtn" type="button" class="quiet-btn" data-i18n="back">返回</button>
+</div>
+</section>
+<section id="setupNotLocalView" hidden>
+<p class="setup-status" data-i18n="notLocalKey">请在运行 Blackout 的那台电脑上设置 key。</p>
+</section>
+<ul class="setup-facts">
+<li data-i18n="factLocal">只存在这台电脑上，不会进入代码仓库。</li>
+<li data-i18n="factMetaOnly">只发给 api.meta.ai，页面和日志都不会再显示它。</li>
+<li data-i18n="factCost">费用从你自己的 Meta 账户扣，一次短谈大约 $0.20。</li>
+</ul>
+<p id="setupMsg" class="error" role="alert"></p>
+</main>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blackout 星图</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/static/observer.css">
+<link rel="stylesheet" href="/static/map.css">
+<script src="/static/js/i18n.js" defer></script>
+<script src="/static/js/map.js" defer></script>
+<script src="/static/js/observer.js" defer></script>
+</head>
+<body>
+<main id="observerApp" class="stage">
+<svg id="obsMap" class="map" role="img" aria-label="星图" preserveAspectRatio="xMidYMid meet"></svg>
+<header class="corner corner-left" data-i18n="observerBrand">Blackout · 星图</header>
+<div id="obsMic" class="corner corner-right" data-i18n="micOffline">未连接</div>
+<p id="obsMessage" class="quiet-center" hidden></p>
+<p id="obsFinished" class="finished-line" hidden></p>
+<aside id="obsParkingPanel" class="parking">
+<p class="parking-label" data-i18n="parkingLot">停车场</p>
+<ul id="obsParking" class="parking-list"></ul>
+</aside>
+<footer id="obsSubtitles" class="subtitles">
+<p id="obsCaption" class="caption"></p>
+<p id="obsReply" class="ai-line"></p>
+<p id="obsDecision" class="decision-line"></p>
+</footer>
+<p id="obsCounters" class="counters"></p>
+<section id="posterWrap" class="poster-wrap" hidden>
+<p id="posterTitle" class="poster-title"></p>
+<img id="posterImage" class="poster-image" data-i18n-alt="posterAlt" alt="成果图">
+</section>
+</main>
+</body>
+</html>

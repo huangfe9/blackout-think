@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blackout 黑屏思考</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/static/app.css">
+<link rel="stylesheet" href="/static/map.css">
+<script src="/static/js/i18n.js" defer></script>
+<script src="/static/js/cues.js" defer></script>
+<script src="/static/js/speech.js" defer></script>
+<script src="/static/js/capture.js" defer></script>
+<script src="/static/js/map.js" defer></script>
+<script src="/static/js/result.js" defer></script>
+<script src="/static/js/black.js" defer></script>
+<script src="/static/js/start.js" defer></script>
+</head>
+<body>
+<main id="page-start" class="page start-page">
+<div class="top-actions"><a id="keyLink" class="lang-toggle key-link" href="/setup" data-i18n="keyLink">API key</a><button id="langToggle" type="button" class="lang-toggle">English</button></div>
+<div class="start-columns">
+<section class="start-left">
+<p class="brand">Blackout</p>
+<h1 class="start-headline"><span class="headline-line" data-i18n="headline1">不看屏幕，</span><span class="headline-line" data-i18n="headline2">说着把事想清楚。</span></h1>
+<p class="start-subline" data-i18n="subline">你只管说。说完，给你一页总结和一张图。</p>
+<div class="goal-line">
+<input id="goalInput" type="text" data-i18n-placeholder="goalPlaceholder" placeholder="这次想想清楚什么？比如：下周的汇报怎么讲" maxlength="2000" autocomplete="off">
+<button id="micBtn" type="button" class="mic-btn" aria-label="语音输入目标"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3z" fill="currentColor"></path><path d="M5 11a7 7 0 0 0 14 0h-2a5 5 0 0 1-10 0H5z" fill="currentColor"></path><path d="M11 18h2v3h-2z" fill="currentColor"></path></svg></button>
+</div>
+<button id="startBtn" type="button" class="primary lights-off" data-i18n="startButton">关灯，开始说</button>
+<p class="quiet-line" data-i18n="smallLine">屏幕会变黑，直接开口。说「结束」，灯亮，出图。</p>
+<button id="continueLastBtn" type="button" class="quiet-btn" data-i18n="continueLast" hidden>继续上次</button>
+<p id="voiceWarning" class="warning" data-i18n="noVoice" hidden>这台设备没有中文语音，AI 的声音可能听不到。建议用 Chrome 或 Edge，或安装中文语音。</p>
+<p id="startErr" class="error" role="alert"></p>
+</section>
+<aside class="start-right">
+<figure class="how-sheet">
+<img id="howItWorksImg" src="/static/how_it_works_zh.jpg" data-i18n-alt="howAlt" alt="三格手绘图：一个人开口说话，屏幕变黑安静思考，最后出现一页总结和一张图。">
+</figure>
+</aside>
+</div>
+<div class="start-below">
+<label class="check">
+<input id="openObserver" type="checkbox">
+<span data-i18n="observerCheck">同时打开星图窗口（第二块屏幕）</span>
+</label>
+<button id="pastToggle" type="button" class="past-toggle" hidden></button>
+<section id="recentSection" class="recent" hidden>
+<div id="recentList"></div>
+</section>
+</div>
+</main>
+<div id="page-black" hidden>
+<div id="dot" class="dot reconnecting"></div>
+<div id="hint" class="hint" data-i18n="blackHint">空格暂停 · 说“结束”或按 Esc 结束</div>
+</div>
+<main id="page-result" class="page result-page" hidden>
+<h2 id="resultTitle">成果</h2>
+<div id="resultTopActions" class="result-top-actions">
+<button id="copyBtn" type="button" class="primary ink-btn" data-i18n="copyMarkdown">复制为 Markdown</button>
+<span id="posterActions" class="poster-top-actions"></span>
+</div>
+<p id="resultGoal" class="result-goal"></p>
+<div id="degradedNotice" class="warning" data-i18n="degraded" hidden>AI 整理没有完成，下面是对话中记录的原始内容。</div>
+<div class="summary-block">
+<p id="resultSummary" class="summary-text" hidden></p>
+<button id="stopReadingBtn" type="button" class="quiet-btn" data-i18n="stopReading" hidden>停止朗读</button>
+</div>
+<figure id="posterFigure" class="poster-figure" hidden></figure>
+<div id="result"></div>
+<p id="resultErr" class="error" role="alert"></p>
+<div class="result-actions">
+<label id="sketchLabel" class="buttonlike quiet-btn" for="sketchInput" data-i18n="addSketch">加入纸上草稿</label>
+<input id="sketchInput" type="file" accept="image/*" capture="environment" hidden>
+<button id="restartBtn" type="button" class="quiet-btn" data-i18n="startAgain">再来一次</button>
+</div>
+</main>
+</body>
+</html>

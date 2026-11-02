@@ -1,0 +1,1 @@
+Return the full content of exactly `tests/test_example.py`. Change only this: line 41, `assert "'\/sample\/" not in js`, uses the invalid escape `\/`, which Python warns about and will reject in a future version. Write the string as a raw string, `r"'\/sample\/"`, so it checks the same characters.

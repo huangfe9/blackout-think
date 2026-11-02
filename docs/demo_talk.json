@@ -1,0 +1,48 @@
+{
+  "goal": "Decide how to run a small product launch this week",
+  "lines": [
+    {"say": "I need to sort out a small product launch this week.", "pause_after": 1, "beat": "open"},
+    {"say": "There are three things: the launch day, support cover, and the announcement.", "pause_after": 1, "beat": "open"},
+    {"say": "Let me think through the day first.", "pause_after": 1, "beat": "quiet"},
+    {"say": "Okay, decided: we launch Thursday morning.", "pause_after": 1, "beat": "quiet"},
+    {"say": "Three people are on support that day.", "pause_after": 1, "beat": "quiet"},
+    {"say": "They can answer the first questions.", "pause_after": 1, "beat": "quiet"},
+    {"say": "By the way, I really want hot pot tonight.", "pause_after": 7, "beat": "drift"},
+    {"say": "Please look up what time of day launch emails get the most opens.", "pause_after": 8, "beat": "lookup"},
+    {"say": "While that runs, let me keep thinking.", "pause_after": 1, "beat": "lookup"},
+    {"say": "The announcement should be short and clear.", "pause_after": 8, "beat": "lookup"},
+    {"say": "With five people on support, the weekend is covered easily.", "pause_after": 9, "beat": "conflict"},
+    {"say": "Right, it's three, so weekend cover will be on-call only.", "pause_after": 7, "beat": "answer"},
+    {"say": "I need to write a short launch email to customers by Wednesday, saying what's new and that weekend support is on-call only.", "pause_after": 1, "beat": "todo"},
+    {"say": "I still don't know if marketing can review it in time.", "pause_after": 1, "beat": "open_question"},
+    {"say": "Stop.", "pause_after": 0, "beat": "stop"}
+  ],
+  "captions": {
+    "open": "One goal, three things to sort out.",
+    "quiet": "The AI stays silent and quietly builds the map.",
+    "drift": "Off topic: the idea is parked, attention returns.",
+    "lookup": "A lookup runs in the background while thinking continues.",
+    "conflict": "Five, not three: the AI asks about the change.",
+    "answer": "Corrected to three, with weekend cover on-call only.",
+    "todo": "A writing todo the AI can draft later.",
+    "open_question": "An open question is kept, not answered away.",
+    "stop": "One word ends it and brings the light back."
+  },
+  "scene_captions": {
+    "start": "Type one goal. Press Lights off.",
+    "black": "This black screen is all you get. From here, voice only.",
+    "wait": "Lights on at once. The real 15-second summary wait is shortened here.",
+    "result": "One page: summary, decisions, todos, and a picture from Muse Image.",
+    "words": "Every item opens to the exact words behind it.",
+    "draft": "It noticed a writing todo and drafted it in the background.",
+    "picture": "The same picture, drawn from the checked summary."
+  },
+  "title_lines": [
+    "Blackout: thinking without a screen",
+    "Recorded live against the real Meta API. The voices are computer speech."
+  ],
+  "closing_lines": [
+    "No screen while you think. One page when you finish.",
+    "It runs on your own computer with your own Meta key."
+  ]
+}
