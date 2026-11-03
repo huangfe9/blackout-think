@@ -20,6 +20,39 @@ Technical highlights
 - Citation checking on the server: final items without a matching numbered utterance are dropped, and a later statement replaces an earlier one rather than counting as a contradiction.
 - Local spend control in budget.py, owner-only key storage outside the repository, and sessions scoped to the owning browser with no accounts.
 
+Inspiration
+The tool you think with and the thing that distracts you are the same screen. Most focus tools remind you to concentrate, and this one removes the screen. You state a goal, press Lights off, and think out loud while walking, resting, or sketching on paper. Blackout listens quietly, tracks your line of thought, and returns a cited summary, decisions, todos, and a picture when you finish.
+
+How it was built
+Blackout uses FastAPI and plain JavaScript. A WebSocket bridge streams realtime speech to Meta's transcription model. A conductor calls Muse Spark each turn with strict structured output, returning additions only, with silence as the default. A final pass cites numbered utterances, and the server drops items without valid evidence. Muse Image draws a one-page picture that Spark reads back to check its text. A local spending cap limits every paid call. Muse Spark and Muse Wonder generated the code stage by stage from written specs, while Claude Code drafted the specs, reviewed and tested the output, and assembled the demo video.
+
+Challenges
+- Making silence the default without missing the moment that matters, such as asking about a changed fact before the person corrects it.
+- Telling the AI's own echo apart from real speech while the microphone stays on.
+- Making every summary item traceable to the exact words it came from.
+- Keeping a user's own API key from ever leaking, which was checked by a separate security review.
+
+What we learned
+- A model that flags the right moment is not enough when a server rule holds the question back until it is stale.
+- A whole-project prompt made code generation unreliable, and small, scoped generation stages fixed it.
+- Measured behaviour beats impressions, which is why there is an evaluation.
+
+What's next
+- Try it with real users and measure whether it helps.
+- Test on a physical phone.
+- Build a version that runs in the browser with the person's own key and no server.
+- Support open-weight models for people who want to run it fully locally.
+
+Built with
+Python, FastAPI, JavaScript, WebSockets, muse-spark-1.3, muse-voice-transcribe-1.0, muse-image-1.0, muse-wonder-1.0 (for building the code), Meta Model API.
+
+Video title and description
+Blackout: Think Out Loud With the Screen Off
+Watch a spoken goal become a cited summary, mind map, decisions, todos, and a hand-drawn picture.
+Recorded live against the real Meta API; the voices are computer speech, and the summary wait was shortened.
+Repository: https://github.com/huangfe9/blackout-think
+Replay, no key and no install: https://huangfe9.github.io/blackout-think/app/static/example.html
+
 Theme and track
 Theme: Build for Your World. Track: Indie developer (solo-built).
 
